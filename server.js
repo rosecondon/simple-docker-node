@@ -1,0 +1,17 @@
+'use strict';
+
+const express = require('express');
+
+// Constants
+const PORT = 3008;
+const HOST = '0.0.0.0';
+
+// App
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Testing Docker Image with Node js!\n');
+});
+
+app.listen(PORT, HOST);
+console.log(`Running on http://${HOST}:${PORT}`);
+
